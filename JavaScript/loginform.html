@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Welcome. Please log in</p>
+
+    <form>
+        <label for="usernameInput">Username: </label><input type="text" id="usernameInput" placeholder="Enter your Username"/>
+        <br/>
+        <label for="passwordInput">Password: </label><input type="text" id="passwordInput" placeholder="Enter your Password">
+        <br/><br/>
+        <p id="message"></p>
+        <button onclick="verifyUser(event)">Login</button> 
+    </form>
+
+    <script>
+        function verifyUser(event){
+            event.preventDefault(); //stop the form from submitting
+
+            var username = document.getElementById("usernameInput").value;
+            var password = document.getElementById("passwordInput").value;
+            checkUserCreds(username, password);
+        }
+
+        function checkUserCreds (username, password) {
+            var systemUsername = "Ofentse";
+            var systemPassword = "2000";
+
+            if(username == systemUsername && password == systemPassword){
+                document.getElementById("message").innerHTML = "Correct Login details";
+            } else {
+                document.getElementById("message").innerHTML = "Incorrect Login details. Please try again";
+            }
+        }
+    </script>
+</body>
+</html>

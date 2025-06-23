@@ -1,0 +1,81 @@
+/* Reset default spacing */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Calculator table */
+table {
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Input display */
+input[type="text"] {
+  width: 100%;
+  font-size: 2rem;
+  text-align: right;
+  padding: 15px;
+  box-sizing: border-box;
+  border: none;
+  background-color: #e6f2ff;
+  color: #333;
+}
+
+/* Buttons */
+td {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+}
+
+td:hover {
+  background-color: #d1e7ff;
+}
+
+/* Operator buttons */
+td:nth-child(4) {
+  background-color: #ffcccb;
+  color: #000;
+}
+
+td:nth-child(4):hover {
+  background-color: #ff9999;
+}
+
+/* Equal button */
+td[colspan="4"] {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+td[colspan="4"]:hover {
+  background-color: #45a049;
+}
+
+/* AC button */
+td:contains("AC") {
+  background-color: #ff704d;
+  color: white;
+}
+
+td:contains("AC"):hover {
+  background-color: #ff3300;
+}
